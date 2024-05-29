@@ -1,0 +1,182 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec); /* Gradient background */
+}
+
+/* Header and Navigation */
+header {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #ffcc33);
+  border-radius: 2vw; /* Scale border-radius proportionally */
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3); /* Scale shadow proportionally */
+  margin: 1vh auto; /* Center the nav and scale margin proportionally */
+  padding: 1vh 2vw; /* Scale padding proportionally */
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+  max-width: 90%; /* Limit the max width of nav */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+nav ul li {
+  margin: 0.5vh 1vw; /* Scale margin proportionally */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 1.5vh 1.5vw; /* Scale padding proportionally */
+  border-radius: 1.5vw; /* Scale border-radius proportionally */
+  font-size: calc(1vw + 1vh); /* Scale font-size proportionally */
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black; /* Change font color to black */
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0);
+  transform: scale(1);
+  transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Add color transition */
+}
+
+/* Page Title */
+.container {
+  margin-top: 8vh; /* Ensure content starts below fixed header */
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.page-title {
+  margin: 2vh 0;
+  font-size: calc(2vw + 2vh); /* Scale font-size proportionally */
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: calc(0.2vw + 0.2vh); /* Scale letter-spacing proportionally */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1vh;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ffcc33);
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Index.html */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background: url('Project%20Media/sunset.JPG') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero .box {
+  position: absolute;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  backdrop-filter: blur(2px); /* Add background blur */
+  border-radius: calc(1vh + 1vw); /* Rounded corners */
+  color: white;
+}
+
+.hero .name {
+  font-size: calc(4vw + 4vh);
+  top: 47%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Text shadow */
+}
+
+.hero .title {
+  font-size: calc(2vw + 2vh);
+  top: 62%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Text shadow */
+}
+
+.hero .description {
+  font-size: calc(0.9vw + 0.9vh);
+  top: 76%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Text shadow */
+}
+
+/* Contact.html */
+.contactContainer {
+  padding-top: 10vh; /* Adjust this value if needed */
+  text-align: center;
+}
+
+.contact-box {
+  display: inline-block;
+  backdrop-filter: blur(5px); /* Add background blur */
+  border-radius: 2vw; /* Scale border-radius proportionally */
+  margin-top: 2vh;
+  text-align: center;
+  color: white; /* Text color */
+}
+
+h1 {
+  margin-top: 0; /* Reset margin for h1 */
+  text-align: center;
+  font-size: calc(2vw + 2vh); /* Scale font-size proportionally */
+}
+
+.contact-info {
+  margin-top: 2vh;
+  font-size: calc(1vw + 1vh); /* Scale font-size proportionally */
+  text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.6);
+}
+
+.contact-info p {
+  margin: 1vh 0; /* Scale margin proportionally */
+}
+
+.contact-info a {
+  color: white; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Reading List - Kevin O'Donnell</title>
+  <style>
+    .reading-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2vh 2vw;
+    }
+
+    .category {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 2vw;
+      box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+      padding: 2vh 2vw;
+      transition: transform 0.3s;
+      flex: 1 1 calc(33.333% - 2vw); /* Default to 3 items per row */
+    }
+
+    .category:hover {
+      transform: translateY(-1vh);
+    }
+
+    .category h2 {
+      margin-top: 0;
+      font-size: calc(1.5vw + 1.5vh);
+      border-bottom: 2px solid #ff7e5f;
+      padding-bottom: 1vh;
+    }
+
+    .category ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .category ul li {
+      margin: 1vh 0;
+      font-size: calc(0.9vw + 0.9vh);
+    }
+
+
+    @media (max-width: 900px) {
+      .category {
+        flex: 1 1 calc(50% - 2vw); /* 2 items per row */
+      }
+    }
+
+    @media (max-width: 390px) {
+      .category {
+        flex: 1 1 100%; /* 1 item per row */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="#">Reading List</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="page-title">Reading List</h1>
+    <div class="reading-list">
+      <div class="category">
+        <h2>Fiction</h2>
+        <ul>
+          <li><strong>1984</strong> <em>George Orwell</em></li>
+          <li><strong>Fight Club</strong> <em>Chuck Palahniuk</em></li>
+          <li><strong>The Little Prince</strong> <em>Antoine de Saint-Exupery</em></li>
+          <li><strong>Animal Farm</strong> <em>George Orwell</em></li>
+          <li><strong>Life of Pi</strong> <em>Yann Martel</em></li>
+          <li><strong>A Wrinkle in Time</strong> <em>Madeleine L’Engle</em></li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>SciFi</h2>
+        <ul>
+          <li><strong>Player of Games</strong> <em>Ian Banks</em></li>
+          <li><strong>Hitchhiker’s Guide to the Galaxy</strong> <em>Douglas Adams</em></li>
+          <li><strong>Dune</strong> <em>Frank Herbert</em></li>
+          <li><strong>2001: A Space Odyssey</strong> <em>Arthur C. Clarke</em></li>
+          <li><strong>The Three-Body Problem</strong> <em>Liu Cixin</em></li>
+          <li><strong>The Martian</strong> <em>Andy Weir</em></li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>History</h2>
+        <ul>
+          <li><strong>Sapiens</strong> <em>Yuval Noah Harari</em></li>
+          <li><strong>The Art of War</strong> <em>Sun Tzu</em></li>
+          <li><strong>Modern Ireland</strong> <em>R.F. Foster</em></li>
+          <li><strong>Man’s Search for Meaning</strong> <em>Viktor Frankl</em></li>
+          <li><strong>Michael Collins</strong> <em>Tim Pat Coogan</em></li>
+          <li><strong>The Guns of August</strong> <em>Barbara W. Tuchman</em></li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>Science</h2>
+        <ul>
+          <li><strong>Starry Messenger</strong> <em>Neil deGrasse Tyson</em></li>
+          <li><strong>The Hidden Reality</strong> <em>Brian Greene</em></li>
+          <li><strong>Freakonomics</strong> <em>Steven D. Levitt</em></li>
+          <li><strong>Cosmos</strong> <em>Carl Sagan</em></li>
+          <li><strong>Brief Answers to the Big Questions</strong> <em>Stephen Hawking</em></li>
+          <li><strong>Until the End of Time</strong> <em>Brian Greene</em></li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2>Philosophy</h2>
+        <ul>
+          <li><strong>The Daily Stoic</strong> <em>Ryan Holiday</em></li>
+          <li><strong>How to Win Friends and Influence People</strong> <em>Dale Carnegie</em></li>
+          <li><strong>Siddhartha</strong> <em>Herman Hesse</em></li>
+          <li><strong>Meditations</strong> <em>Marcus Aurelius</em></li>
+          <li><strong>Brothers Karamazov</strong> <em>Dostoevsky</em></li>
+          <li><strong>Discourses</strong> <em>Epictetus</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

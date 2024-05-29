@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>About Kevin O'Donnell</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: linear-gradient(to bottom, #f0f4f8, #d9e2ec); /* Gradient background */
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 5vh; /* Adjust margin */
+      flex-wrap: wrap; /* Allow content to wrap */
+      padding: 0 5vw; /* Add padding to the sides */
+    }
+
+    .intro img {
+      margin: 0 5vw; /* Adjust margin */
+      max-width: 22vw; /* Adjust maximum width */
+      width: 100%; /* Make sure the width scales */
+      height: auto; /* Maintain aspect ratio */
+      flex: 1 1 30vw; /* Allow image to resize */
+      object-fit: contain; /* Maintain aspect ratio and ensure the image is fully visible */
+    }
+
+    .intro-text {
+      flex: 1 1 30vw; /* Allow text to resize */
+      text-align: center;
+      margin: 0 5vw; /* Add margin to the sides */
+    }
+
+    .intro-text p {
+      margin: 2vh 0; /* Adjust margin */
+      font-size: calc(1.2vw + 1.2vh); /* Responsive text size */
+    }
+
+    .about-content p {
+      margin: 2vh 0; /* Adjust margin */
+      font-size: calc(0.9vw + 0.9vh); /* Responsive text size */
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Reading.html">Reading List</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="page-title">About Kevin O'Donnell</h1>
+  </div>
+  <div class="intro">
+    <div class="intro-text">
+      <p><em>I think, therefore I am.</em> I create, therefore I exist.</p>
+      <p>I became an engineer to pioneer technology, cultivate meaningful moments, and foster relationships, all to deepen my appreciation of the world around me.</p>
+    </div>
+    <img src="Project%20Media/portrait.jpg" alt="Kevin O'Donnell">
+
+    <div class="about-content">
+      <p>Kevin is a Biomedical Engineer specializing in Robotics and Control, with a passion for innovation and problem-solving. Through his academic journey at UCLA and Columbia University, and his professional experience, he has developed expertise in clinical research, rapid prototyping, and product development.</p>
+      <p>Kevin has always enjoyed exploring uncharted territories and working in dynamic environments. This appreciation began during his early work at UCLA, where he spent three years in a psychiatry and physiology research lab, learning to ask novel questions. He continued pursuing new frontiers while earning his Master’s at Columbia, developing cutting-edge medical devices and collaborating with medical professionals.</p>
+      <p>His industry experience at Silk Road Medical and Shape Memory Medical involved independent projects in microfluidics test-bed design and anatomical 3D printing. His responsibilities spanned R&D, Clinical, Manufacturing, and Quality. Kevin is driven by the challenge of transforming complex ideas into tangible solutions and thrives at the intersection of engineering and human health.</p>
+      <p>Beyond his professional life, Kevin enjoys honing his engineering and robotics skills through personal projects showcased in the ‘Projects’ tab. He also loves surfing, camping, reading, boxing, and has competed nationally in CrossFit. Thanks for stopping by, and he looks forward to connecting!</p>
+    </div>
+  </div>
+</body>
+</html>

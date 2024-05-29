@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Project List</title>
+    <style>
+      .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh 2vw;
+        margin: 0 2vw; /* Add margins to the left and right */
+      }
+
+      .project-box {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 2vw;
+        box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+        padding: 2vh 2vw;
+        transition: transform 0.3s;
+        flex: 1 1 calc(33.333% - 2vw); /* Default to 3 items per row */
+      }
+
+      .project-title {
+        margin-top: 0;
+        font-size: calc(1.5vw + 1.5vh);
+        padding-bottom: 0.5vh; /* Adjust padding to bring border closer to title */
+        margin-bottom: 1.5vh; /* Add margin to create separation from media */
+        border-bottom: 2px solid #ff7e5f;
+        text-align: center; /* Center the text */
+        font-weight: bold; /* Make the text bold */
+      }
+
+      .project-media img,
+      .project-media video,
+      .project-media object,
+      .project-media iframe {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensure the entire media is always visible */
+        margin-bottom: 1vh;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .project-media img.fullscreen,
+      .project-media video.fullscreen,
+      .project-media object.fullscreen,
+      .project-media iframe.fullscreen {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 90vh;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for better visibility */
+        transition: none; /* Remove transition for fullscreen */
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 999;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+
+      .project-date {
+        font-size: calc(0.8vw + 0.8vh); /* Adjust the size as needed */
+        color: #666;
+        margin-bottom: 1vh; /* Adjust the margin as needed */
+      }
+
+      .project-description {
+        font-size: calc(0.9vw + 0.9vh); /* Adjust the size as needed */
+        margin-bottom: 1vh; /* Adjust the margin as needed */
+      }
+
+      .project-skills {
+        font-size: calc(0.8vw + 0.8vh); /* Adjust the size as needed */
+        color: #333;
+        margin-bottom: 1vh; /* Adjust the margin as needed */
+      }
+
+      @media (max-width: 900px) {
+        .project-box {
+          flex: 1 1 calc(50% - 2vw); /* 2 items per row */
+        }
+      }
+
+      @media (max-width: 600px) {
+        .project-box {
+          flex: 1 1 100%; /* 1 item per row */
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="Reading.html">Reading List</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Project List</h1>
+    <div class="project-list">
+      <!-- Project 1 -->
+      <div class="project-box">
+        <div class="project-title">StarWalker - Bipedal Robot</div>
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/GIY-cTRmIOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-date">Spring 2024</div>
+        <div class="project-description">A bipedal fire-shooting robot designed and built for Columbia University Robotics Studio.</div>
+        <div class="project-skills">Skills: 3D printing, Robotics, CAD, Electronics, Matlab, Python, R&D</div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-box">
+        <div class="project-title">UCLA Honors Physiology Research</div>
+        <div class="project-media">
+          <img src="Project%20Media/Poster.png" alt="Project Image">
+          <object data="Project%20Media/Research.pdf" type="application/pdf" width="100%" height="500px">
+            <p>It appears you don't have a PDF plugin for this browser. You can <a href="Project%20Media/Research.pdf">click here to download the PDF file.</a></p>
+          </object>
+        </div>
+        <div class="project-date">Spring 2022</div>
+        <div class="project-description">Led a psychiatry-independent research experiment on sex-divergent and genotypic effects during neurodevelopment on Bloc-1 deficient Pallid mice. Responsible for all sides of the project from behavioral experimentation to data analysis to scientific writing.</div>
+        <div class="project-skills">Skills: R&D</div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-box">
+        <div class="project-title">Endotracheal Intubation Ideation</div>
+        <div class="project-media">
+            <img src="Project%20Media/Intubation.png" alt="Project Image">
+        </div>
+        <div class="project-date">Fall 2022</div>
+        <div class="project-description">Designed a novel Endotracheal Intubation biomedical device in Columbia Biomedical Innovation class. Demonstrated knowledge of all sides from problem definition through solution/idea generation to prototyping. Demonstrated knowledge of regulatory reimbursement and intellectual property issues that accompany the device landscape and potential business opportunities.</div>
+        <div class="project-skills">Skills: R&D</div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-box">
+        <div class="project-title">3D Printer Build</div>
+        <div class="project-media">
+            <img src="Project%20Media/Printer.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2024</div>
+        <div class="project-description">Fixed and modified a Creality Ender 6 3-D Printer. Installed Biqu H2 direct extruder print head with custom 3-D printed mount and cooling system. Installed drag chain BL Touch and RasPi Camera for monitoring and recording. Reconfigured the software to run off of a Raspberry Pi using Klipper and MainSail allowing remote control and further customizability.</div>
+        <div class="project-skills">Skills: 3D printing, Electronics</div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-box">
+        <div class="project-title">UCLA Bruin Young Tech Professionals Bootcamp</div>
+        <div class="project-media">
+            <img src="Project%20Media/MediPal.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2021</div>
+        <div class="project-description">Utilized the Google Design Thinking framework to create a Minimal Viable Product; a full-stack API-based medication reminder texting service to be integrated into a hospital’s Electronic Health Record. Leveraged doctor/professional interview to augment interface design and business plan presented to JPL City of LA etc.</div>
+        <div class="project-skills">Skills: R&D</div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-box">
+        <div class="project-title">Columbia Mechatronics Class</div>
+        <div class="project-media">
+                    <img src="Project%20Media/Mechatronics.PNG" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2024</div>
+        <div class="project-description">Completed projects in Digital Electronics and Logic Systems, Analog electronics OpAmps and Filters, Electromagnetic Levitation, Interfacing Microcontrollers, Programming Microcontrollers in Assembly and C, Digital Input/Output System (Solenoid) – On/Off Control Timing Control, and Stepper Motor – Open-Loop Position Computer Control State Machines.</div>
+        <div class="project-skills">Skills: Robotics, Electronics, C++</div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-box">
+        <div class="project-title">Columbia Computational Physiology Class</div>
+        <div class="project-media">
+            <img src="Project%20Media/CompPhys.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2023</div>
+        <div class="project-description">Completed projects in Neuromotor Control, Brain Imaging, Genomics, and AI in Medicine (Auditory and Visual).</div>
+        <div class="project-skills">Skills: Matlab, Python</div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-box">
+        <div class="project-title">Retinal Microneedle Commercialization Plan</div>
+        <div class="project-media">
+            <img src="Project%20Media/Lab2Market.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2024</div>
+        <div class="project-description">Partnered with a MBA student in the Columbia Lab-To-Market program to draft a commercialization plan for a Biomedical Engineering Technology Accelerator (BiomedX) retinal microneedle assessing its business viability and technological feasibility. Worked closely with the engineering team to identify clinical needs stakeholder requirements and business cases to de-risk the technology.</div>
+        <div class="project-skills">Skills: R&D</div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-box">
+        <div class="project-title">3D-printed Vinyl Shelves</div>
+        <div class="project-media">
+            <img src="Project%20Media/Vinyl.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2024</div>
+        <div class="project-description">Shelves for artists: Led Zeppelin, Kanye West, The Grateful Dead, The Beatles, Kid Cudi, Jimi Hendrix, and The Kinks.</div>
+        <div class="project-skills">Skills: 3D printing, CAD</div>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="project-box">
+          <div class="project-title">Noble Ninja App</div>
+          <div class="project-media">
+              <iframe src="https://www.youtube.com/embed/rDM6r-ZDoHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="project-date">2015</div>
+          <div class="project-description">Programmed and deployed the fast-paced iPhone game ‘Noble Ninja’ on the Apple Store. It was my first introduction to programming at 15 years old.</div>
+          <div class="project-skills">Skills: Swift</div>
+      </div>
+
+      <!-- Project 11 -->
+      <div class="project-box">
+        <div class="project-title">‘Believe’ Stitch Pattern</div>
+        <div class="project-media">
+            <img src="Project%20Media/Stitch.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2023</div>
+        <div class="project-description">Wrote Matlab code that commands an embroidery machine to create the photographed design inspired by my favorite show ‘Ted Lasso’. The embroidery design possesses fractal shapes, multiple threads and thread colors, parametric fractal shapes, and quality stitching patterns.</div>
+        <div class="project-skills">Skills: Electronics, Matlab</div>
+      </div>
+
+      <!-- Project 12 -->
+      <div class="project-box">
+        <div class="project-title">Desk and Chair Topology Optimization</div>
+        <div class="project-media">
+            <img src="Project%20Media/Toplogy.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2023</div>
+        <div class="project-description">Utilized Altair Topology Optimization to decrease material/weight and create organic designs based on expected forces and underlying safety constraints.</div>
+        <div class="project-skills">Skills: CAD</div>
+      </div>
+
+      <!-- Project 13 -->
+      <div class="project-box">
+        <div class="project-title">Laser Cut Desk Organizer</div>
+        <div class="project-media">
+            <img src="Project%20Media/DeskOrganizer.png" alt="Project Image">
+        </div>
+        <div class="project-date">Spring 2023</div>
+        <div class="project-description">Wrote Matlab code to generate the SVG files compatible with the laser cutting machine. Code creates a design that includes joining slots, part holders, name engraving, and fractal/image engraving.</div>
+        <div class="project-skills">Skills: Laser cutting, Matlab</div>
+      </div>
+    </div>
+  </div>
+
+    <div class="overlay"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const overlay = document.querySelector('.overlay');
+
+          document.querySelectorAll('.project-media img').forEach(media => {
+              media.addEventListener('dblclick', () => {
+                  media.classList.add('fullscreen');
+                  overlay.classList.add('active');
+              });
+
+              overlay.addEventListener('click', () => {
+                  document.querySelectorAll('.project-media img').forEach(media => {
+                      media.classList.remove('fullscreen');
+                  });
+                  overlay.classList.remove('active');
+              });
+          });
+      });
+    </script>
+
+</body>
+</html>
